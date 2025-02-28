@@ -28,7 +28,7 @@
                 <th>Nilai Akhir</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="text-align: center;">
             <?php
                 $nomor = 1;
                 foreach($ar_nilai as $ns){
