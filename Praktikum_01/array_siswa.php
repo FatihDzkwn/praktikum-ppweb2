@@ -17,7 +17,7 @@
 </head>
 <body>    
     <h3>Daftar Nilai Siswa</h3>
-    <table border="1" width="100%">
+    <table border="1" width="100%" >
         <thead>
             <tr>
                 <th>No</th>
