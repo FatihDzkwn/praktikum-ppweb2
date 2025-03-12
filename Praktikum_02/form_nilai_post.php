@@ -25,14 +25,14 @@
         </nav>
     </header>
 
-    <main role="main" class="container mt-1">
-        <h3>Nilai Siswa</h3>
+    <main role="main" class="container mt-3">
+        <h3>Form Penilaian Siswa</h3>
         <hr />
-        <form class="mx-auto" action="form_nilai.php" method="GET">
+        <form class="mx-auto" action="nilai_siswa.php" method="POST">
             <div class="form-group row">
                 <label for="nama" class="col-5 col-form-label font-weight-bold text-right">Nama Lengkap</label>
                 <div class="col-7">
-                    <input id="nama" placeholder="Nama Lengkap" type="text" required="required" class="form-control" name="nama">
+                    <input id="nama" name="nama" placeholder="Nama Lengkap" type="text" required="required" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
@@ -48,19 +48,19 @@
             <div class="form-group row">
                 <label for="nilai_uts" class="col-5 col-form-label font-weight-bold text-right">Nilai UTS</label>
                 <div class="col-7">
-                    <input id="nilai_uts" placeholder="Nilai UTS" type="number" class="form-control" required="required" min="0" max="100" name="nilai_uts" value="">
+                    <input id="nilai_uts" placeholder="Nilai UTS" type="number" class="form-control" required="required" min="0" max="100" name="nilai_uts">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="nilai_uas" class="col-5 col-form-label font-weight-bold text-right">Nilai UAS</label>
                 <div class="col-7">
-                    <input id="nilai_uas" placeholder="Nilai UAS" type="number" class="form-control" required="required" min="0" max="100" name="nilai_uas" value="">
+                    <input id="nilai_uas" placeholder="Nilai UAS" type="number" class="form-control" required="required" min="0" max="100" name="nilai_uas">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="nilai_tugas" class="col-5 col-form-label font-weight-bold text-right">Nilai Tugas/Praktikum</label>
                 <div class="col-7">
-                    <input id="nilai_tugas" placeholder="Nilai Tugas" type="number" class="form-control" required="required" min="0" max="100" name="nilai_tugas" value="">
+                    <input id="nilai_tugas" placeholder="Nilai Tugas" type="number" class="form-control" required="required" min="0" max="100" name="nilai_tugas">
                 </div>
             </div>
             <div class="form-group row">
@@ -69,23 +69,6 @@
                 </div>
             </div>
         </form>
-
-    <?php
-    $proses = isset($_GET['proses']) ? $_GET['proses'] : '';
-    $nama = isset($_GET['nama']) ? $_GET['nama'] : '';
-    $matkul = isset($_GET['matkul']) ? $_GET['matkul'] : '';
-    $nilai_uts = isset($_GET['nilai_uts']) ? $_GET['nilai_uts'] : '';
-    $nilai_uas = isset($_GET['nilai_uas']) ? $_GET['nilai_uas'] : '';
-    $nilai_tugas = isset($_GET['nilai_tugas']) ? $_GET['nilai_tugas'] : '';
-
-    echo 'Proses : '.$proses;
-    echo '<br/>Nama : '.$nama;
-    echo '<br/>Mata Kuliah : '.$matkul; 
-    echo '<br/>Nilai UTS : '.$nilai_uts; 
-    echo '<br/>Nilai UAS : '.$nilai_uas; 
-    echo '<br/>Nilai Tugas Praktikum : '.$nilai_tugas; 
-    ?>
-
     </main>
 
     <footer class="mt-5" style="bottom: 0; left: 0; right: 0; position: fixed;">
